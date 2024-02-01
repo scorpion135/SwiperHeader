@@ -1,0 +1,35 @@
+.slider-controls {
+    display: grid;
+    gap: 15px;
+}
+
+.slider-controls__arrows {
+    display: flex;
+    gap: 15px;
+}
+
+.slider-controls__count {
+    display: flex;
+    column-gap: 9px;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1;
+    text-align: center;
+}
+
+.slider-controls__count-current, .swiper-pagination-current {
+    font-size: 45px;
+    line-height: 0.75;
+    color: #fff;
+}
+
+.slider-controls__count-total, .swiper-pagination-total {
+    color: #FFF;
+    font-size: 22px;
+    font-weight: 600;
+    opacity: 0.3;
+}
