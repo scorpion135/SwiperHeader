@@ -1,167 +1,165 @@
-
 @mixin mobile-bachground-image {
-    @media (max-width: 1023px) {
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
+  @media (max-width: 1023px) {
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 }
 
 .slide {
-    height: 100vh;
-    overflow: hidden;
-    padding-bottom: 80px;
+  height: 100vh;
+  overflow: hidden;
+  padding-bottom: 80px;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
-    background: url('./../../img/01.jpg');
+  background: url("./../img/01.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+  color: #fff;
+
+  cursor: grab;
+
+  &:active {
+    cursor: grabbing;
+  }
+
+  &::before {
+    content: "";
+  }
+
+  @media (max-width: 1200px) {
+    padding-bottom: 60px;
+  }
+
+  @media (max-width: 767px) {
+    padding-top: 100px;
+    padding-bottom: 40px;
+  }
+
+  &--norway {
+    background: url("./../img/01.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
 
-    color: #fff;
+    @include mobile-bachground-image;
+  }
 
-    cursor: grab;
+  &--austria {
+    background: url("./../img/02.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 
-    &:active {
-        cursor: grabbing;
-    }
+    @include mobile-bachground-image;
+  }
 
-    &::before {
-        content: '';
-    }
+  &--uae {
+    background: url("./../img/03.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 
-    @media (max-width:1200px) {
-        padding-bottom: 60px;
-    }
+    @include mobile-bachground-image;
+  }
 
-    @media (max-width:767px) {
-        padding-top: 100px;
-        padding-bottom: 40px;
-    }
+  &--thailand {
+    background: url("./../img/04.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 
-    &--norway {
-        background: url('./../../img/01.jpg');
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
+    @include mobile-bachground-image;
+  }
 
-        @include mobile-bachground-image
-    }
+  &--morrocco {
+    background: url("./../img/05.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 
-    &--austria {
-        background: url('./../../img/02.jpg');
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-
-        @include mobile-bachground-image
-    }
-
-    &--uae {
-        background: url('./../../img/03.jpg');
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-
-        @include mobile-bachground-image
-    }
-
-    &--thailand {
-        background: url('./../../img/04.jpg');
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-
-        @include mobile-bachground-image
-    }
-
-    &--morrocco {
-        background: url('./../../img/05.jpg');
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-
-        @include mobile-bachground-image
-    }
+    @include mobile-bachground-image;
+  }
 }
 
 .slide__header {
-    position: relative;
-    text-align: center;
+  position: relative;
+  text-align: center;
 }
 
 .slide__tagline {
-    position: absolute;
-    top: 0px;
-    width: 100%;
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 1.56vw;
-    font-weight: 400;
-    letter-spacing: 0.55em;
-    line-height: 1.23;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.56vw;
+  font-weight: 400;
+  letter-spacing: 0.55em;
+  line-height: 1.23;
 
-    @media (max-width: 767px) {
-        font-size: 3vw;
-    }
+  @media (max-width: 767px) {
+    font-size: 3vw;
+  }
 }
 
 @mixin background($color) {
-    background: 
-    linear-gradient(47.06deg,
-        $color -3.87%,
-        rgba(255, 255, 255, 0) 20.89%),
+  background: linear-gradient(
+      47.06deg,
+      $color -3.87%,
+      rgba(255, 255, 255, 0) 20.89%
+    ),
     #fff;
 }
 
 .slide__title {
-    display: inline-block;
-    padding: 0 10px;
-    font-size: 13vw;
-    font-weight: 700;
-    line-height: 1.22;
-    margin-bottom: -30px;
+  display: inline-block;
+  padding: 0 10px;
+  font-size: 13vw;
+  font-weight: 700;
+  line-height: 1.22;
+  margin-bottom: -30px;
 
-    @media (max-width: 767px) {
-        font-size: 19vw;
-    }
+  @media (max-width: 767px) {
+    font-size: 19vw;
+  }
 
-    // @include background(#000000);
+  // @include background(#000000);
 
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
 
-    &--norway {
-        @include background(#051d27);
-    }
-    
-    &--austria {
-        @include background(#122127);
-    }
-    
-    &--uae {
-        @include background(#aa6621); 
-    }
-    
-    &--thailand  {
-        @include background(#2e7c88); 
-    }
-    
-    &--morrocco  {
-        @include background(#757575);
-    }
-    
+  &--norway {
+    @include background(#051d27);
+  }
+
+  &--austria {
+    @include background(#122127);
+  }
+
+  &--uae {
+    @include background(#aa6621);
+  }
+
+  &--thailand {
+    @include background(#2e7c88);
+  }
+
+  &--morrocco {
+    @include background(#757575);
+  }
 }
 
 .slide__locations {
-    display: flex;
-    column-gap: 30px;
-    width: 70%;
-    margin: 0 auto;
+  display: flex;
+  column-gap: 30px;
+  width: 70%;
+  margin: 0 auto;
 
-    @media (max-width: 1023px) {
-        width: 90%;
-    }
+  @media (max-width: 1023px) {
+    width: 90%;
+  }
 
-
-    @media (max-width: 767px) {
-        width: 90%;
-        flex-direction: column;
-        row-gap: 20px;
-    }
+  @media (max-width: 767px) {
+    width: 90%;
+    flex-direction: column;
+    row-gap: 20px;
+  }
 }
